@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('currencies/add', 'CurrencyController@create')->name('currencies.add');
+Route::resource('currencies', 'CurrencyController')->except([
+    'create'
+]);
