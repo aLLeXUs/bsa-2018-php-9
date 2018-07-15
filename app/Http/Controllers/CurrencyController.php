@@ -65,7 +65,7 @@ class CurrencyController extends Controller
     public function show($id)
     {
         $currency = Currency::find($id);
-        if (Gate::denies('view', $currency)) {
+        if ($currency === null || Gate::denies('view', $currency)) {
             return redirect('/');
         }
         return view('currencies.show', ['currency' => $currency]);

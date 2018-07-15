@@ -47,8 +47,8 @@
                         @endcan
                         @can('delete', $currency)
                             <button title="Delete" class="btn btn-link py-0" onclick="event.preventDefault();
-                                document.getElementById('delete-form').action = '{{ route('currencies.destroy', $currency['id']) }}';
-                                document.getElementById('delete-form').submit();">
+                                let form = document.getElementById('delete-form');
+                                form.action = '{{ route('currencies.destroy', $currency['id']) }}';form.submit();">
                                 <i class="fas fa-trash-alt"></i> Delete
                             </button>
                         @endcan
