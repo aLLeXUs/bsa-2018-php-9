@@ -33,7 +33,7 @@
             <td>{{ $currency['short_name'] }}</td>
         </tr>
         <tr>
-            <th scope="row">Short name</th>
+            <th scope="row">Price</th>
             <td>{{ $currency['price'] }}</td>
         </tr>
         </tbody>
